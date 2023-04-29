@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/29 16:10:36 by plau              #+#    #+#             */
-/*   Updated: 2023/04/29 17:15:44 by plau             ###   ########.fr       */
+/*   Created: 2023/04/29 16:54:21 by plau              #+#    #+#             */
+/*   Updated: 2023/04/29 17:14:13 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dog.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
 
-int main(void)
+#include "animal.hpp"
+
+class Dog : public Animal
 {
-	Animal a;
-	Animal b(a);
-	
-	Dog c;
-	Dog d(c);
-}
+	public:
+		/* Orthodox canonical class form */
+		Dog(void);
+		~Dog(void);
+		Dog(const Dog &src); //copy constructor
+		Dog& operator=(const Dog& src); //assignment operator
+	private:	
+};
+
+#endif

@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/29 16:10:36 by plau              #+#    #+#             */
-/*   Updated: 2023/04/29 17:15:44 by plau             ###   ########.fr       */
+/*   Created: 2023/04/29 17:25:34 by plau              #+#    #+#             */
+/*   Updated: 2023/04/29 17:37:58 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dog.hpp"
+#ifndef CAT_HPP
+# define CAT_HPP
 
-int main(void)
+#include "animal.hpp"
+
+class Cat : public Animal
 {
-	Animal a;
-	Animal b(a);
-	
-	Dog c;
-	Dog d(c);
-}
+	public:
+		/* Orthodox canonical class form */
+		Cat(void);
+		~Cat(void);
+		Cat(const Cat &src);
+		Cat& operator=(const Cat& src);
+	private:
+};
+
+#endif

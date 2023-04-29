@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.cpp                                         :+:      :+:    :+:   */
+/*   cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/29 16:09:20 by plau              #+#    #+#             */
-/*   Updated: 2023/04/29 17:22:33 by plau             ###   ########.fr       */
+/*   Created: 2023/04/29 17:25:29 by plau              #+#    #+#             */
+/*   Updated: 2023/04/29 17:41:43 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "animal.hpp"
+#include "cat.hpp"
 
-Animal::Animal(void)
+Cat::Cat(void)
 {
-	std::cout << "[Animal] Default constructor" << std::endl;
-	this->type = "Animal";
+	std::cout << "[Cat] Default Constructor" << std::endl;
+	this->type = "Cat";
 }
 
-Animal::~Animal(void)
+Cat::~Cat(void)
 {
-	std::cout << "[Animal] Destructor" << std::endl;
+	std::cout << "[Cat] Destructor" << std::endl;
 }
 
-Animal::Animal(const Animal &src)
+Cat::Cat(const Cat &src)
 {
-	std::cout << "[Animal] Copy constructor" << std::endl;
+	std::cout << "[Cat] Copy Constructor" << std::endl;
 	(*this) = src;
 }
 
-Animal& Animal::operator=(const Animal& src)
+Cat& Cat::operator=(const Cat& src)
 {
-	std::cout << "[Animal] Assignment operator" << std::endl;
-	if (this != &src)//address of this v address of src
+	std::cout << "[Cat] Assignment operator" << std::endl;
+	if (this != &src)
 	{
 		this->type = src.type;
 	}
