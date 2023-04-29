@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:09:20 by plau              #+#    #+#             */
-/*   Updated: 2023/04/29 17:22:33 by plau             ###   ########.fr       */
+/*   Updated: 2023/04/29 19:12:47 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,10 @@ Animal& Animal::operator=(const Animal& src)
 		this->type = src.type;
 	}
 	return (*this);
+}
+
+void	Animal::makeSound()
+{
+	std::cout << MAGENTA << "[" << this->type << "] does not make sound" 
+		<< RESET <<std::endl;
 }

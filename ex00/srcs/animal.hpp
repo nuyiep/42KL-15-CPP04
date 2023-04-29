@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:08:04 by plau              #+#    #+#             */
-/*   Updated: 2023/04/29 16:53:32 by plau             ###   ########.fr       */
+/*   Updated: 2023/04/29 18:59:06 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ANIMAL_HPP
 
 #include <iostream>
+#include "colour.hpp"
 class Animal
 {
 	public:
@@ -22,6 +23,8 @@ class Animal
 		~Animal(void);
 		Animal(const Animal &src);
 		Animal& operator=(const Animal& src); //assignment operator
+
+		virtual void makeSound();
 	protected:
 		std::string type;
 };

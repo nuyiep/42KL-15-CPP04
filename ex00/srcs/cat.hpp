@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 17:25:34 by plau              #+#    #+#             */
-/*   Updated: 2023/04/29 17:37:58 by plau             ###   ########.fr       */
+/*   Updated: 2023/04/29 19:13:01 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class Cat : public Animal
 		~Cat(void);
 		Cat(const Cat &src);
 		Cat& operator=(const Cat& src);
+
+		void	makeSound();
 	private:
 };
 

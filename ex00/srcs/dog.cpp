@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:54:18 by plau              #+#    #+#             */
-/*   Updated: 2023/04/29 17:24:34 by plau             ###   ########.fr       */
+/*   Updated: 2023/04/29 19:12:37 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,9 @@ Dog& Dog::operator=(const Dog& src)
 		this->type = src.type;
 	}
 	return (*this);
+}
+
+void	Dog::makeSound()
+{
+	std::cout << MAGENTA << "[" << this->type << "]" << " barks" << RESET << std::endl;
 }
