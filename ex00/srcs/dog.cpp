@@ -6,19 +6,19 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:54:18 by plau              #+#    #+#             */
-/*   Updated: 2023/04/29 19:12:37 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/01 15:18:10 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dog.hpp"
 
-Dog::Dog(void)
+Dog::Dog()
 {
 	std::cout << "[Dog] Default constructor" << std::endl;
 	this->type = "Dog";
 }
 
-Dog::~Dog(void)
+Dog::~Dog()
 {
 	std::cout << "[Dog] Destructor" << std::endl;
 }
@@ -45,7 +45,7 @@ Dog& Dog::operator=(const Dog& src)
 	return (*this);
 }
 
-void	Dog::makeSound()
+void	Dog::makeSound() const
 {
 	std::cout << MAGENTA << "[" << this->type << "]" << " barks" << RESET << std::endl;
 }

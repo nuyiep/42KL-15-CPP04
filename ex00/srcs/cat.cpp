@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 17:25:29 by plau              #+#    #+#             */
-/*   Updated: 2023/04/29 19:13:57 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/01 15:23:43 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Cat& Cat::operator=(const Cat& src)
 	return (*this);
 }
 
-void	Cat::makeSound()
+void	Cat::makeSound() const
 {
 	std::cout << MAGENTA << "[" << this->type << "]" << " miao" << RESET << std::endl;
 }

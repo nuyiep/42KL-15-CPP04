@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 17:25:34 by plau              #+#    #+#             */
-/*   Updated: 2023/04/29 19:13:01 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/01 15:30:11 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ class Cat : public Animal
 {
 	public:
 		/* Orthodox canonical class form */
-		Cat(void);
-		~Cat(void);
+		Cat();
+		~Cat();
 		Cat(const Cat &src);
 		Cat& operator=(const Cat& src);
 
-		void	makeSound();
+		void	makeSound() const;
 	private:
 };
 
