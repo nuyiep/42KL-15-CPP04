@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 16:53:39 by plau              #+#    #+#             */
-/*   Updated: 2023/05/01 17:08:20 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/01 18:14:01 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define BRAIN_HPP
 
 #include <iostream>
+#include "colour.hpp"
 
 class Brain
 {

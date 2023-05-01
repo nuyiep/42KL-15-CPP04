@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 17:25:29 by plau              #+#    #+#             */
-/*   Updated: 2023/05/01 15:23:43 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/01 19:15:32 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@ Cat::Cat(void)
 {
 	std::cout << "[Cat] Default Constructor" << std::endl;
 	this->type = "Cat";
+	this->brain = new Brain();
 }
 
 Cat::~Cat(void)
 {
 	std::cout << "[Cat] Destructor" << std::endl;
+	delete this->brain;
 }
 
 Cat::Cat(const Cat &src)

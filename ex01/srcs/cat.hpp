@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 17:25:34 by plau              #+#    #+#             */
-/*   Updated: 2023/05/01 15:30:11 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/01 18:21:51 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 # define CAT_HPP
 
 #include "animal.hpp"
+#include "Brain.hpp"
 
-class Cat : public Animal
+class Cat : public Animal, public Brain
 {
 	public:
 		/* Orthodox canonical class form */
@@ -26,6 +27,7 @@ class Cat : public Animal
 
 		void	makeSound() const;
 	private:
+		Brain	*brain;
 };
 
 #endif

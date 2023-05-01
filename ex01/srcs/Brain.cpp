@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 16:53:34 by plau              #+#    #+#             */
-/*   Updated: 2023/05/01 17:21:11 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/01 18:14:38 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 /* Default constructor */
 Brain::Brain()
 {
-	std::cout << "[Brain] Default Constructor" << std::endl;
+	std::cout << MAGENTA << "[Brain] Default Constructor" << RESET << std::endl;
 }
 
 /* Destructor */
 Brain::~Brain()
 {
-	std::cout << "[Brain] Destructor" << std::endl;
+	std::cout << MAGENTA << "[Brain] Destructor" << RESET << std::endl;
 }
 
 /* Copy constructor */
