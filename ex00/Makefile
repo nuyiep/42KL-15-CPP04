@@ -6,7 +6,7 @@
 #    By: plau <plau@student.42.kl>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/21 15:33:58 by plau              #+#    #+#              #
-#    Updated: 2023/04/29 18:52:30 by plau             ###   ########.fr        #
+#    Updated: 2023/05/01 15:55:06 by plau             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,9 @@ CXXFLAGS		= 	-Wall -Wextra -Werror -std=c++98 -pedantic
 SRCS_FILES		= 	main \
 					animal \
 					dog \
-					cat
+					cat \
+					WrongAnimal \
+					WrongCat
 SRCS			= 	$(addprefix $(SRCS_DIR), $(addsuffix .cpp, $(SRCS_FILES)))
 OBJS			= 	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRCS_FILES)))
 SRCS_DIR		= 	srcs/

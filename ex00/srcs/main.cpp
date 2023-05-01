@@ -6,12 +6,13 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:10:36 by plau              #+#    #+#             */
-/*   Updated: 2023/05/01 15:30:26 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/01 16:45:49 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dog.hpp"
 #include "cat.hpp"
+#include "WrongCat.hpp"
 
 int main(void)
 {
@@ -43,4 +44,20 @@ int main(void)
 		delete (j);
 		delete (i);
 	}
+	// {
+	// 	WrongAnimal a;
+	// 	WrongCat b;
+	// }
+	// {
+	// 	std::cout << "\n---------- EX00 WrongAnimal ----------\n" << std::endl;
+	// 	const WrongAnimal* meta = new WrongAnimal();
+	// 	const WrongAnimal* i = new WrongCat();
+
+	// 	std::cout << meta->getType() << std::endl;
+	// 	std::cout << i->getType() << " " << std::endl;
+	// 	meta->makeSound();
+	// 	i->makeSound(); //will output the cat sound!
+	// 	delete (meta);
+	// 	delete (i);
+	// }
 }
