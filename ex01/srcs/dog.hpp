@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:54:21 by plau              #+#    #+#             */
-/*   Updated: 2023/05/01 15:15:50 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/01 17:23:20 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 # define DOG_HPP
 
 #include "animal.hpp"
+#include "Brain.hpp"
 
-class Dog : public Animal
+class Dog : public Animal, public Brain
 {
 	public:
 		/* Orthodox canonical class form */
@@ -25,7 +26,8 @@ class Dog : public Animal
 		Dog& operator=(const Dog& src); //assignment operator
 
 		void	makeSound() const;
-	private:	
+	private:
+		Brain	*brain;
 };
 
 #endif
