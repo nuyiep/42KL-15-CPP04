@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 17:25:34 by plau              #+#    #+#             */
-/*   Updated: 2023/05/01 21:02:33 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/03 16:59:36 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class Cat : public Animal
 		Cat& operator=(const Cat& src);
 
 		void	makeSound() const;
+		void	setBrainIdea(int i, std::string newIdea);
+		const std::string 	&getBrainIdea(int i) const;
 	private:
 		Brain	*brain;
 };

@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:10:36 by plau              #+#    #+#             */
-/*   Updated: 2023/05/03 16:03:44 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/03 17:16:15 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,25 +54,63 @@ int main(void)
 	// }
 	
 	/* Deep copy- different address */
-	{
-		std::cout << "\n---------- EX01 (Copy constructor) tests ----------\n" << std::endl;
-		Dog	dog1;
-		dog1.setBrainIdea(9, "the Dog Returned");
-		Dog dog2(dog1);
+	// {
+	// 	std::cout << "\n---------- EX01 (Copy constructor) tests ----------\n" << std::endl;
+	// 	Dog	dog1;
+	// 	dog1.setBrainIdea(9, "the Dog Returned");
+	// 	Dog dog2(dog1);
 
-		//const std::string idea = dog1.getBrainIdea(9); 
-		//use this because previously getter function without &- can't get it directly
-		std::cout << GREEN << "Dog1 idea: " << dog1.getBrainIdea(9) << RESET << std::endl;
-		std::cout << GREEN << "Dog1 idea address: " << &(dog1.getBrainIdea(9)) << RESET << std::endl;
+	// 	//const std::string idea = dog1.getBrainIdea(9); 
+	// 	//use this because previously getter function without &- can't get it directly
+	// 	std::cout << GREEN << "Dog1 idea: " << dog1.getBrainIdea(9) << RESET << std::endl;
+	// 	std::cout << GREEN << "Dog1 idea address: " << &(dog1.getBrainIdea(9)) << RESET << std::endl;
 		
-		std::cout << YELLOW << "Dog2 idea: " << dog2.getBrainIdea(9) << RESET << std::endl;
-		std::cout << YELLOW << "Dog2 idea address: " << &(dog2.getBrainIdea(9)) << RESET << std::endl;
+	// 	std::cout << YELLOW << "Dog2 idea: " << dog2.getBrainIdea(9) << RESET << std::endl;
+	// 	std::cout << YELLOW << "Dog2 idea address: " << &(dog2.getBrainIdea(9)) << RESET << std::endl;
 
-		dog1.setBrainIdea(9, "Changed content");
-		std::cout << GREEN << "Dog1 idea: " << dog1.getBrainIdea(9) << RESET << std::endl;
-		std::cout << YELLOW << "Dog2 idea: " << dog2.getBrainIdea(9) << RESET << std::endl;
+	// 	dog1.setBrainIdea(9, "Changed content");
+	// 	std::cout << GREEN << "Dog1 idea: " << dog1.getBrainIdea(9) << RESET << std::endl;
+	// 	std::cout << YELLOW << "Dog2 idea: " << dog2.getBrainIdea(9) << RESET << std::endl;
+	// }
+	
+	/* Cats */
+	
+	// {
+	// 	std::cout << "\n---------- EX01 (Copy assignment) tests ----------\n" << std::endl;
+	// 	Cat	cat1;
+	// 	Cat cat2;
+
+	// 	cat1.setBrainIdea(99, "Nezuko");
+	// 	cat2 = cat1;
+	// 	cat1.setBrainIdea(99, "Inosuke");
+	// 	std::cout << "Cat1 idea: " << cat1.getBrainIdea(99) << std::endl;
+	// 	//should print Inosuke
+	// 	std::cout << "Cat2 idea: " << cat2.getBrainIdea(99) << std::endl;
+	// 	//should print Nezuko
+		
+	// }
+
+	{
+		std::cout << "\n---------- EX01 (Copy assignment) tests ----------\n" << std::endl;
+		Cat	cat1;
+		Cat cat2;
+
+		cat1.setBrainIdea(99, "Nezuko");
+		cat2 = cat1;
+		cat1.setBrainIdea(99, "Inosuke");
+		std::cout << "Cat1 idea: " << cat1.getBrainIdea(99) << std::endl;
+		//should print Inosuke
+		std::cout << "Cat2 idea: " << cat2.getBrainIdea(99) << std::endl;
+		//should print Nezuko
+		std::cout << "Cat1 idea address: " << &(cat1.getBrainIdea(99)) << std::endl;
+		std::cout << "Cat2 idea address: " << &(cat2.getBrainIdea(99)) << std::endl;
+		// same address if is shallow copy
+		// different address if is deep copy
+		//change at assignment operator to shallow or deep
 	}
 	
+	
+
 	// std::cout << "\n----------Leaks Check----------\n" << std::endl;
 	// system("leaks -q onFire");
 	return (0);
