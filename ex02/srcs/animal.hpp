@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:08:04 by plau              #+#    #+#             */
-/*   Updated: 2023/05/03 21:13:47 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/03 21:28:07 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ class Animal
 {
 	public:
 		/* orthodox canonical class form */
-		Animal();
 		virtual	~Animal();
 		/* Needs to add virtual because your main is a pointer 
 			otherwise, the derived class won't be deleted 
@@ -41,7 +40,10 @@ class Animal
 		/* 				the makeSound() from Animal, not Dog */
 		/*			- allows the functions to be overridden in the derived classes */
 		std::string	getType() const;
+	/* Moved default constructor to protected to prevent other */
+	/* code from creating instances of the class */
 	protected:
+		Animal();
 		std::string type;
 };
 
