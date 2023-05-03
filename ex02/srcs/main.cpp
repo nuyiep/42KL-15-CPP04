@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:10:36 by plau              #+#    #+#             */
-/*   Updated: 2023/05/03 21:20:02 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/03 21:37:01 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(void)
 {
 	/* To test abstract */
 	// Animal a;
-	
+	Animal a;
 	// Dog dog1;
 	// dog1.makeSound();
 
