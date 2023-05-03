@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:54:18 by plau              #+#    #+#             */
-/*   Updated: 2023/05/01 19:40:33 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/03 15:55:52 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,16 @@ Dog::Dog()
 Dog::~Dog()
 {
 	std::cout << "[Dog] Destructor" << std::endl;
+	// printf("%p", (void *)this->brain);
 	delete (this->brain);
 }
 
 /* Copy constructor */
+/* Has to be a deep copy */
 Dog::Dog(const Dog &src)
 {
 	std::cout << "[Dog] Copy constructor" << std::endl;
+	this->brain = new Brain();
 	(*this) = src;
 	/** The expression "(*this)" dereferences the "this" pointer 
 	to access the current object, and the assignment 
@@ -41,13 +44,23 @@ Dog::Dog(const Dog &src)
 }
 
 /* Copy assignment operator */
+/* 1- *this->brain = *(src.brain)
+		- Deep copy of the Brain object
+		- content of the Brain object pointed to by 
+			this->brain are overwritten
+		- prefered with dynamically allocated memory as
+			this ensures that the copies are independent 
+	2- this->brain = src.brain;
+		- Shallow copy of the Brain object
+*/
 Dog& Dog::operator=(const Dog& src)
 {
-	std::cout << "[Dog] Assignment operator" << std::endl;
+	std::cout << RED << "[Dog] Assignment operator" << RESET << std::endl;
 	if (this != &src)
 	{
 		this->type = src.type;
-		this->brain = src.brain;
+		*this->brain = *(src.brain); //deep copy
+		// this->brain = src.brain; //shallow copy
 	}
 	return (*this);
 }
@@ -56,4 +69,18 @@ Dog& Dog::operator=(const Dog& src)
 void	Dog::makeSound() const
 {
 	std::cout << MAGENTA << "[" << this->type << "]" << " barks" << RESET << std::endl;
+}
+
+/* Setter function for Brain's idea of Dog class */
+/* Need this because Brain is a private variable in Dog class */
+void	Dog::setBrainIdea(int i, std::string newIdea)
+{
+	this->brain->setBrainIdea(i, newIdea);
+}
+
+/* Getter function for Brain's idea of Dog class */
+/* Need this because Brain is a private variable in Dog class */
+const std::string &Dog::getBrainIdea(int i) const
+{
+	return (this->brain->getBrainIdea(i));
 }
