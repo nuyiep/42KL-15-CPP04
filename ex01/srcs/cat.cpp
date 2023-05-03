@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 17:25:29 by plau              #+#    #+#             */
-/*   Updated: 2023/05/03 17:15:21 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/03 17:32:36 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ Cat::~Cat(void)
 Cat::Cat(const Cat &src)
 {
 	std::cout << "[Cat] Copy Constructor" << std::endl;
+	this->brain = new Brain(); //deep copy
+	// this->brain = src.brain; //shallow copy
+	//need to delete brain at cat destructor
 	(*this) = src;
 }
 
@@ -42,6 +45,8 @@ Cat& Cat::operator=(const Cat& src)
 		// if want to use shallow copy, 
 		// need to remove at cat destructor the delete brain
 		// otherwise will have malloc error
+		// because then- both the original and copied Cat object
+		// will have the same pointer to the same Brain object in memory
 	}
 	return (*this);
 }

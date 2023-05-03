@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:10:36 by plau              #+#    #+#             */
-/*   Updated: 2023/05/03 17:16:15 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/03 17:33:50 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main(void)
 	
 	/* Deep copy- different address */
 	// {
-	// 	std::cout << "\n---------- EX01 (Copy assignment) tests ----------\n" << std::endl;
+	// 	std::cout << "\n---------- EX01 Dog (Copy assignment) tests ----------\n" << std::endl;
 	// 	Dog	dog1;
 	// 	Dog dog2;
 
@@ -55,7 +55,7 @@ int main(void)
 	
 	/* Deep copy- different address */
 	// {
-	// 	std::cout << "\n---------- EX01 (Copy constructor) tests ----------\n" << std::endl;
+	// 	std::cout << "\n---------- EX01 Dog (Copy constructor) tests ----------\n" << std::endl;
 	// 	Dog	dog1;
 	// 	dog1.setBrainIdea(9, "the Dog Returned");
 	// 	Dog dog2(dog1);
@@ -74,9 +74,9 @@ int main(void)
 	// }
 	
 	/* Cats */
-	
+
 	// {
-	// 	std::cout << "\n---------- EX01 (Copy assignment) tests ----------\n" << std::endl;
+	// 	std::cout << "\n---------- EX01 Cat (Copy assignment) tests ----------\n" << std::endl;
 	// 	Cat	cat1;
 	// 	Cat cat2;
 
@@ -87,29 +87,25 @@ int main(void)
 	// 	//should print Inosuke
 	// 	std::cout << "Cat2 idea: " << cat2.getBrainIdea(99) << std::endl;
 	// 	//should print Nezuko
-		
+	// 	std::cout << "Cat1 idea address: " << &(cat1.getBrainIdea(99)) << std::endl;
+	// 	std::cout << "Cat2 idea address: " << &(cat2.getBrainIdea(99)) << std::endl;
+	// 	// same address if is shallow copy
+	// 	// different address if is deep copy
+	// 	//change at assignment operator to shallow or deep
 	// }
-
+	
 	{
-		std::cout << "\n---------- EX01 (Copy assignment) tests ----------\n" << std::endl;
-		Cat	cat1;
-		Cat cat2;
-
-		cat1.setBrainIdea(99, "Nezuko");
-		cat2 = cat1;
-		cat1.setBrainIdea(99, "Inosuke");
-		std::cout << "Cat1 idea: " << cat1.getBrainIdea(99) << std::endl;
-		//should print Inosuke
-		std::cout << "Cat2 idea: " << cat2.getBrainIdea(99) << std::endl;
-		//should print Nezuko
-		std::cout << "Cat1 idea address: " << &(cat1.getBrainIdea(99)) << std::endl;
-		std::cout << "Cat2 idea address: " << &(cat2.getBrainIdea(99)) << std::endl;
-		// same address if is shallow copy
-		// different address if is deep copy
-		//change at assignment operator to shallow or deep
+		std::cout << "\n---------- EX01 Cat (Copy constructor) tests ----------\n" << std::endl;
+		Cat cat1;
+		cat1.setBrainIdea(55, "Demon Slayer");
+		Cat cat2(cat1);
+		cat1.setBrainIdea(55, "Winne the Pooh");
+		std::cout << "Cat1 idea = " << cat1.getBrainIdea(55) << std::endl;
+		std::cout << "Cat2 idea = " << cat2.getBrainIdea(55) << std::endl;
+		std::cout << "Cat1 idea address = " << &(cat1.getBrainIdea(55)) << std::endl;
+		std::cout << "Cat2 idea address = " << &(cat2.getBrainIdea(55)) << std::endl;
+		
 	}
-	
-	
 
 	// std::cout << "\n----------Leaks Check----------\n" << std::endl;
 	// system("leaks -q onFire");
