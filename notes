@@ -2,6 +2,25 @@ Subtype polymorphism
 - 
 
 Abstract classes
+- pure virtual function- no body
+- e.g. 
+  normal 
+    class Enemy
+    {
+      public:
+        virtual void attack()
+        {
+          std::cout << "I  am the enemy class" << std::endl;
+        }
+    };
+- pure virtual - no body- no implementation
+    class Enemy
+    {
+      public:
+        virtual void attack() = 0;
+    }
+- whenever there is a pure virtual function in base class, need to overwrite it 
+- An abstract class is a class with a pure virtual function in it
 
 Interfaces 
 
