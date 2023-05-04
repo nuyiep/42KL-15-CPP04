@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 21:40:57 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 16:37:43 by plau             ###   ########.fr       */
+/*   Created: 2023/05/04 16:29:41 by plau              #+#    #+#             */
+/*   Updated: 2023/05/04 16:49:25 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
-#include "Cure.hpp"
+#ifndef ICHARACTER_HPP
+# define ICHARACTER_HPP
 
-int main(void)
+#include "AMateria.hpp"
+#include <iostream>
+
+class ICharacter
 {
-	// AMateria a;
-	Ice b;
-	Cure c;
-}
+	public:
+		virtual	~ICharacter() {}
+		virtual std::string const &getName() const = 0;
+		virtual void equip(AMateria* m) = 0;
+		virtual void unequip(int idx) = 0;
+		virtual void use(int idx, ICharacter& target) = 0;
+};
+
+#endif

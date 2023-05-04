@@ -6,7 +6,7 @@
 #    By: plau <plau@student.42.kl>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/21 15:33:58 by plau              #+#    #+#              #
-#    Updated: 2023/05/04 15:45:05 by plau             ###   ########.fr        #
+#    Updated: 2023/05/04 16:44:59 by plau             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,9 @@ CXXFLAGS		= 	-Wall -Wextra -Werror -std=c++98 -pedantic
 SRCS_FILES		= 	main \
 					AMateria \
 					Ice \
-					Cure 
+					Cure \
+					Character 
+					
 
 SRCS			= 	$(addprefix $(SRCS_DIR), $(addsuffix .cpp, $(SRCS_FILES)))
 OBJS			= 	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRCS_FILES)))

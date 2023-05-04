@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 21:40:57 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 16:37:43 by plau             ###   ########.fr       */
+/*   Created: 2023/05/04 16:04:17 by plau              #+#    #+#             */
+/*   Updated: 2023/05/04 16:25:51 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
-#include "Cure.hpp"
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
-int main(void)
+#include <iostream>
+
+class Character
 {
-	// AMateria a;
-	Ice b;
-	Cure c;
-}
+	public: 
+		/* Orthodox canonical class form */
+		Character();
+		~Character();
+		Character(const Character &src);//copy constructor
+		Character &operator=(const Character &src);//copy assignment operator
+	private: 
+};
+
+#endif
