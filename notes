@@ -22,7 +22,13 @@ Abstract classes
 - whenever there is a pure virtual function in base class, need to overwrite it 
 - An abstract class is a class with a pure virtual function in it
 
+
+
 Interfaces 
+- pure abstract classes 
 
 ex00- virtual 
 ex01- private inheritance
+ex02- just added =0 to Animal makeSound
+	- moved Animal default constructor to protected for extra protection
+ex03- 
