@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 21:40:57 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 15:45:26 by plau             ###   ########.fr       */
+/*   Created: 2023/05/04 14:53:46 by plau              #+#    #+#             */
+/*   Updated: 2023/05/04 15:59:38 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
-#include "Cure.hpp"
+#ifndef ICE_HPP
+# define ICE_HPP
 
-int main(void)
+#include "AMateria.hpp"
+
+class Ice : public AMateria
 {
-	AMateria a;
-	Ice b;
-	Cure c;
-}
+	public:
+		/* Orthodox canonical class form */
+		Ice();
+		~Ice();
+		Ice(const Ice& src);//copy constructor
+		Ice& operator=(const Ice& src);//copy assignment operator
+
+		/* Member function */
+		AMateria *clone() const;
+};
+
+#endif

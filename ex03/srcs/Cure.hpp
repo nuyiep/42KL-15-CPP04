@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 21:40:57 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 15:45:26 by plau             ###   ########.fr       */
+/*   Created: 2023/05/04 15:25:02 by plau              #+#    #+#             */
+/*   Updated: 2023/05/04 15:52:24 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
-#include "Cure.hpp"
+#ifndef CURE_HPP
+# define CURE_HPP
 
-int main(void)
+#include "AMateria.hpp"
+
+class Cure : public AMateria
 {
-	AMateria a;
-	Ice b;
-	Cure c;
-}
+	public:
+		/* Orthodox canonical class form */
+		Cure();
+		~Cure();
+		Cure(const Cure& src);
+		Cure& operator=(const Cure& src);
+
+		/* Member function */
+		AMateria* clone() const;
+	private:	
+};
+
+#endif
