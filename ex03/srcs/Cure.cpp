@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 15:24:59 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 15:57:26 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/04 18:41:06 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,7 @@ AMateria* Cure::clone() const
 	return (newCure);	
 }
 
-
+void	Cure::use(ICharacter& target)
+{
+	std::cout << "* heals " << target.getName() << " 's wounds" << std::endl;
+}

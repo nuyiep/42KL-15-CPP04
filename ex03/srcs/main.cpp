@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 21:40:57 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 18:31:22 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/04 18:37:48 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main(void)
 {
 	{
 		std::cout << "\n---------- EX01 Main ----------\n" << std::endl;
-		IMateriaSource* src = new MateriaSource();
+		// IMateriaSource* src = new MateriaSource();
 	// 	src->learnMateria(new Ice());
 	// 	src->learnMateria(new Cure());
 
