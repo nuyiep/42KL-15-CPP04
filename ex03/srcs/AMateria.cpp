@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 21:42:47 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 14:34:37 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/04 14:41:48 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,9 @@ AMateria::AMateria(std::string const &type)
 {
 	std::cout << "[AMateria] Type Constructor" << std::endl;
 	this->_type = type;
+}
+
+std::string const& AMateria::getType() const
+{
+	return (this->_type);
 }
