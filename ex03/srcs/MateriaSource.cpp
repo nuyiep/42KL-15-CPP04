@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:57:09 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 17:02:26 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/04 17:56:16 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,7 @@ MateriaSource	&MateriaSource::operator=(const MateriaSource &src)
 	std::cout << "[MateriaSource] Copy assignment operator" << std::endl;
 }
 
+/* Puts materia into inventory */
+void	MateriaSource::learnMateria(AMateria *materia)
+{
+}

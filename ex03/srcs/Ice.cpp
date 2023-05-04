@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:56:40 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 16:00:52 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/04 18:04:24 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,9 @@ AMateria *Ice::clone() const
 	std::cout << "[Ice] Clone" << std::endl;
 	AMateria *newIce = new Ice;
 	return (newIce);
-	
+}
+
+void	Ice::use(ICharacter& target)
+{
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

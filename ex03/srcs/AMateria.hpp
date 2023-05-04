@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 21:42:44 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 15:58:15 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/04 18:02:00 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define AMATERIA_HPP
 
 #include <iostream>
+#include "ICharacter.hpp"
 
 class AMateria
 {
@@ -31,7 +32,6 @@ class AMateria
 		// virtual	void	use(ICharacter& target);
 	protected:
 		std::string		_type;
-			
 };
 
 #endif

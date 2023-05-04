@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:53:46 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 15:59:38 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/04 18:01:37 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Ice : public AMateria
 
 		/* Member function */
 		AMateria *clone() const;
+		void	use(ICharacter&	target);
 };
 
 #endif

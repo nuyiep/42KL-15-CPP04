@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:29:41 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 16:49:25 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/04 18:11:31 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "AMateria.hpp"
 #include <iostream>
 
+class AMateria;
 class ICharacter
 {
 	public:

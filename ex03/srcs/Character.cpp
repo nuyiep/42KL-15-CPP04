@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:03:33 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 16:45:34 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/04 17:10:46 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,9 @@ Character &Character::operator=(const Character &src)
 	std::cout << "[Character] Copy assignment operator" << std::endl;
 	(void)src;
 	return (*this);
+}
+
+std::string const& Character::getName() const
+{
+	return (this->_name);
 }

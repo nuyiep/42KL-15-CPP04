@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:57:01 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 17:00:03 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/04 18:33:24 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 # define MATERIASOURCE_HPP
 
 #include <iostream>
+#include "AMateria.hpp"
+#include "IMateriaSource.hpp"
 
-class MateriaSource
+class MateriaSource : public IMateriaSource
 {
 	public:
 		/* Orthodox canonical class form */
@@ -23,6 +25,9 @@ class MateriaSource
 		~MateriaSource();
 		MateriaSource(const MateriaSource &src);
 		MateriaSource& operator=(const MateriaSource &src);
+		
+		/* Member function */
+		void	learnMateria(AMateria *materia);
 		
 	private:
 };
