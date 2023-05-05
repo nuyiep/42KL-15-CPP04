@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 21:40:57 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 18:37:48 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/04 18:50:16 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int main(void)
 
 	// 	ICharacter* me = new Character("me");
 
-	// 	AMateria* tmp;
-	// 	tmp = src->createMateria("ice");
+		// AMateria* tmp;
+		// tmp = src->createMateria("ice");
 	// 	me->equip(tmp);
 	// 	tmp = src->createMateria("cure");
 	// 	me->equip(tmp);

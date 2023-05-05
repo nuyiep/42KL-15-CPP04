@@ -6,15 +6,15 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:29:41 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 18:11:31 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/05 14:10:48 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
 
-#include "AMateria.hpp"
 #include <iostream>
+#include "AMateria.hpp"
 
 class AMateria;
 class ICharacter

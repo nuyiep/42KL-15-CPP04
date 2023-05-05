@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 21:42:47 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 15:58:17 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/05 14:15:23 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,7 @@ std::string const& AMateria::getType() const
 	return (this->_type);
 }
 
-
+void	AMateria::use(ICharacter &target)
+{
+	std::cout << target.getName() << " [AMateria]" << std::endl;
+}

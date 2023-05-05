@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 21:42:44 by plau              #+#    #+#             */
-/*   Updated: 2023/05/04 18:39:01 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/05 14:11:23 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,18 @@
 #include <iostream>
 #include "ICharacter.hpp"
 
+class ICharacter;
 class AMateria
 {
 	public:
 		/* Orthodox canonical class form */
 		AMateria();
 		virtual 	~AMateria();
-		AMateria(const AMateria& src);//copy constructor
-		AMateria	&operator=(const AMateria& src);//copy assignment operator
+		AMateria(const AMateria& src);
+		AMateria	&operator=(const AMateria& src);
 		
 		/* Member functions */
-		AMateria(std::string const &type); //type constructor
+		AMateria(std::string const &type);
 		std::string	const& 	getType() const; //returns the material type
 		virtual	AMateria* 	clone() const = 0; //An abstract class
 		virtual	void	use(ICharacter& target);
