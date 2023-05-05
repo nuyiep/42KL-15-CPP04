@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:03:33 by plau              #+#    #+#             */
-/*   Updated: 2023/05/05 14:40:41 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/05 20:34:37 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,31 @@
 
 Character::Character()
 {
-	std::cout << "[Character] Default constructor" << std::endl;
 	this->_name = "Unnamed";
-	for (int i = 0; i < 4; i++)
-		this->_inventory[i] = NULL;
+	init_inventory();
 }
 
 Character::~Character()
 {
-	std::cout << "[Character] Destructor" << std::endl;
+	delete_inventory();
 }
 
 Character::Character(const Character &src)
 {
-	std::cout << "[Character] Copy constructor" << std::endl;
 	(*this) = src;
 }
 
 Character &Character::operator=(const Character &src)
 {
-	std::cout << "[Character] Copy assignment operator" << std::endl;
-	*this->_inventory = *(src._inventory);
+	this->_name = src._name;
+	delete_inventory();
+	for (int i = 0; i < 4; i++)
+	{
+		if (src._inventory[i])
+			this->_inventory[i] = src._inventory[i]->clone();
+		else
+			this->_inventory[i] = NULL;
+	}
 	return (*this);
 }
 
@@ -71,6 +75,7 @@ void	Character::unequip(int idx)
 		std::cout << "Unexisting Materia" << std::endl;
 		return ;
 	}
+	delete this->_inventory[idx];
 	this->_inventory[idx] = NULL;
 }
 
@@ -90,6 +95,21 @@ Character::Character(std::string name)
 {
 	std::cout << "[Character] Name constructor" << std::endl;
 	this->_name = name;
+	init_inventory();
+}
+
+/* Helper functions */
+void	Character::init_inventory()
+{
 	for (int i = 0; i < 4; i++)
 		this->_inventory[i] = NULL;
+}
+
+void	Character::delete_inventory()
+{
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_inventory[i])
+			delete _inventory[i];
+	}	
 }

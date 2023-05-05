@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:04:17 by plau              #+#    #+#             */
-/*   Updated: 2023/05/05 14:19:04 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/05 20:35:42 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,13 @@ class Character : public ICharacter
 		void				use(int idx, ICharacter& target);
 		Character(std::string name);
 
-		/* Other functions */
-		// AMateria			*getMateria(int i ) const;
 	private:
 		std::string 	_name;
 		AMateria		*_inventory[4];
+		
+		/* Helper functions */
+		void			init_inventory();
+		void			delete_inventory();
 };
 
 #endif
