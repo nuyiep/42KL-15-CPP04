@@ -6,7 +6,7 @@
 #    By: plau <plau@student.42.kl>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/21 15:33:58 by plau              #+#    #+#              #
-#    Updated: 2023/05/04 16:44:59 by plau             ###   ########.fr        #
+#    Updated: 2023/05/05 22:04:00 by plau             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRCS_FILES		= 	main \
 					AMateria \
 					Ice \
 					Cure \
-					Character 
+					Character \
+					MateriaSource
 					
 
 SRCS			= 	$(addprefix $(SRCS_DIR), $(addsuffix .cpp, $(SRCS_FILES)))

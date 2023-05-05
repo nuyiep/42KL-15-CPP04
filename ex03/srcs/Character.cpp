@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:03:33 by plau              #+#    #+#             */
-/*   Updated: 2023/05/05 20:34:37 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/05 22:07:15 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,6 @@ void	Character::use(int idx, ICharacter& target)
 
 Character::Character(std::string name)
 {
-	std::cout << "[Character] Name constructor" << std::endl;
 	this->_name = name;
 	init_inventory();
 }
