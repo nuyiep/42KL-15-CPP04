@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:04:17 by plau              #+#    #+#             */
-/*   Updated: 2023/05/05 14:09:21 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/05 14:19:04 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class Character : public ICharacter
 		void				equip(AMateria* m);
 		void				unequip(int idx);
 		void				use(int idx, ICharacter& target);
+		Character(std::string name);
 
 		/* Other functions */
 		// AMateria			*getMateria(int i ) const;

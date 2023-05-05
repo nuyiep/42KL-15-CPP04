@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:03:33 by plau              #+#    #+#             */
-/*   Updated: 2023/05/05 14:06:41 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/05 14:40:41 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 Character::Character()
 {
 	std::cout << "[Character] Default constructor" << std::endl;
+	this->_name = "Unnamed";
+	for (int i = 0; i < 4; i++)
+		this->_inventory[i] = NULL;
 }
 
 Character::~Character()
@@ -31,7 +34,7 @@ Character::Character(const Character &src)
 Character &Character::operator=(const Character &src)
 {
 	std::cout << "[Character] Copy assignment operator" << std::endl;
-	(void)src;
+	*this->_inventory = *(src._inventory);
 	return (*this);
 }
 
@@ -83,9 +86,10 @@ void	Character::use(int idx, ICharacter& target)
 	this->_inventory[idx]->use(target);
 }
 
-// AMateria *Character::getMateria(int i ) const
-// {
-// 	if (i < 0 || i >= 4)
-// 		return (NULL);
-// 	return (this->_inventory[i]);
-// }
+Character::Character(std::string name)
+{
+	std::cout << "[Character] Name constructor" << std::endl;
+	this->_name = name;
+	for (int i = 0; i < 4; i++)
+		this->_inventory[i] = NULL;
+}
