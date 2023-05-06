@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:54:18 by plau              #+#    #+#             */
-/*   Updated: 2023/05/06 15:58:09 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/06 18:01:44 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,9 @@ Dog& Dog::operator=(const Dog& src)
 		this->type = src.type;
 		//shouldn't have new Brain here because we have already 
 		//constructed new Brain at default constructor
-		// *this->brain = *(src.brain); //deep copy
-		this->brain = src.brain; //shallow copy
+		*this->brain = *(src.brain); //deep copy
+		// this->brain = src.brain; //shallow copy
+		/* shallow copy- because delete the same address twice - so will have malloc free error */
 	}
 	return (*this);
 }
