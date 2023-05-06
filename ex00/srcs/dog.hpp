@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:54:21 by plau              #+#    #+#             */
-/*   Updated: 2023/05/01 15:15:50 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/06 13:50:49 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Dog : public Animal
 	public:
 		/* Orthodox canonical class form */
 		Dog();
-		~Dog(void);
+		~Dog();
 		Dog(const Dog &src); //copy constructor
 		Dog& operator=(const Dog& src); //assignment operator
 

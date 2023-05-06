@@ -6,11 +6,12 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 15:33:11 by plau              #+#    #+#             */
-/*   Updated: 2023/05/01 16:42:16 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/06 14:05:16 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
+#include "colour.hpp"
 
 WrongCat::WrongCat()
 {
@@ -41,6 +42,6 @@ WrongCat& WrongCat::operator=(const WrongCat &src)
 
 void	WrongCat::makeSound() const
 {
-	std::cout << "WrongCat miao" << std::endl;
+	std::cout << MAGENTA << this->_type << " miao" << std::endl;
 }
 

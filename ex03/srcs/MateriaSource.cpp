@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:57:09 by plau              #+#    #+#             */
-/*   Updated: 2023/05/05 22:01:34 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/06 14:51:05 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ void	MateriaSource::learnMateria(AMateria *materia)
 			break ;
 		}
 	}
-	
 }
 
 /* Getter function */

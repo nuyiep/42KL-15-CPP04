@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:54:18 by plau              #+#    #+#             */
-/*   Updated: 2023/05/03 15:55:52 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/06 15:58:09 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ Dog::~Dog()
 Dog::Dog(const Dog &src)
 {
 	std::cout << "[Dog] Copy constructor" << std::endl;
-	this->brain = new Brain();
+	this->brain = new Brain; 
+	//if this is removed will seg fault- because no brain has been created
 	(*this) = src;
 	/** The expression "(*this)" dereferences the "this" pointer 
 	to access the current object, and the assignment 
@@ -59,8 +60,10 @@ Dog& Dog::operator=(const Dog& src)
 	if (this != &src)
 	{
 		this->type = src.type;
-		*this->brain = *(src.brain); //deep copy
-		// this->brain = src.brain; //shallow copy
+		//shouldn't have new Brain here because we have already 
+		//constructed new Brain at default constructor
+		// *this->brain = *(src.brain); //deep copy
+		this->brain = src.brain; //shallow copy
 	}
 	return (*this);
 }

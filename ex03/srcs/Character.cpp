@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:03:33 by plau              #+#    #+#             */
-/*   Updated: 2023/05/05 22:07:15 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/06 16:51:32 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ void	Character::unequip(int idx)
 		std::cout << "Unexisting Materia" << std::endl;
 		return ;
 	}
-	delete this->_inventory[idx];
 	this->_inventory[idx] = NULL;
 }
 

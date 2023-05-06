@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:08:04 by plau              #+#    #+#             */
-/*   Updated: 2023/05/01 15:26:19 by plau             ###   ########.fr       */
+/*   Updated: 2023/05/06 15:24:40 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ class Animal
 		only the destructor for the base class will run.
 		*/
 		Animal(const Animal &src);
-		Animal& operator=(const Animal& src); //assignment operator
+		Animal& operator=(const Animal& src);
 
-		virtual void		makeSound() const;
+		virtual	void		makeSound() const;
 		/* const for makeSound because in your main function Animal is a const */
 		/* virtual - if no virtual, when you call j-makeSound(), it will invoke */
 		/* 				the makeSound() from Animal, not Dog */
