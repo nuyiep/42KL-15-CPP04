@@ -30,4 +30,7 @@ ex00- virtual
 ex01- private inheritance
 ex02- just added =0 to Animal makeSound
 	- moved Animal default constructor to protected for extra protection
-ex03- 
+ex03- Interfaces
+
+Deep copy 	 is copying the whole content 
+Shallow copy is copying the pointer 
